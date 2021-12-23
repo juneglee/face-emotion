@@ -26,11 +26,11 @@ class DataManager(object):
         if self.dataset_path is not None:
             self.dataset_path = dataset_path
         elif self.dataset_name == 'imdb':
-            self.dataset_path = '../datasets/imdb_crop/imdb.mat'
+            self.dataset_path = './datasets/imdb_crop/imdb.mat'
         elif self.dataset_name == 'fer2013':
-            self.dataset_path = '../datasets/fer2013/fer2013.csv'
+            self.dataset_path = './datasets/fer2013/fer2013.csv'
         elif self.dataset_name == 'KDEF':
-            self.dataset_path = '../datasets/KDEF/'
+            self.dataset_path = './datasets/KDEF/'
         else:
             raise Exception(
                     'Incorrect dataset name, please input imdb or fer2013')
@@ -76,7 +76,7 @@ class DataManager(object):
             faces.append(face.astype('float32'))
         faces = np.asarray(faces)
         faces = np.expand_dims(faces, -1)
-        emotions = pd.get_dummies(data['emotion']).as_matrix()
+        emotions = pd.get_dummies(data['emotion']).to_numpy() # .as_matrix() -> .to_numpy()
         return faces, emotions
 
     # The Karolinska Directed Emotional Faces (KDEF)
