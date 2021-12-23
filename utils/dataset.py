@@ -5,7 +5,7 @@ from random import shuffle
 import os
 import cv2
 
-class DataMangeer(object):
+class DataManager(object):
     '''
     loading fer2013 emotion classification dataset or
     imdb gender classification dataset
