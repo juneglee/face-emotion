@@ -1,6 +1,8 @@
 import numpy as np
-from scipy.misc import imread, imresize
-# ImportError: cannot import name 'imread'
+from scipy.misc import imresize
+from imageio import imread
+# ImportError: cannot import name 'imread' from 'scipy.misc'
+# ImportError: cannot import name 'imresize' from 'scipy.misc'
 # scipy == 1.1.0
 
 def preprocess_input(x, v2=True):
