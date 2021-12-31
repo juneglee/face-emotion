@@ -16,7 +16,7 @@ recognizes human faces and their corresponding emotions
 Not only images, but also webcams are available.
 try it here, inference_emotion_webcam.py
 
-![inference](datasets/result_test_image.jpg)
+![inference](img/result_test_image.jpg)
 
 ### REFERENCE
 * <https://github.com/oarriaga/face_classification>
